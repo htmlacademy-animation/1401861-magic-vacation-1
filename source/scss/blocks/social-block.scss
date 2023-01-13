@@ -5,7 +5,18 @@
     .social-block__list {
       opacity: 1;
       pointer-events: auto;
-      transition: opacity .9s;
+    }
+    .social-block__link {
+      opacity: 1;
+      &--fb {
+        transition-delay: .2s;
+      }
+      &--insta {
+        transition-delay: .3s;
+      }
+      &--vk {
+        transition-delay: .4s;
+      }
     }
   }
 }
@@ -90,6 +101,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition: opacity .5s;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -169,6 +181,8 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  opacity: 0;
+  transition: opacity .5s;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -187,6 +201,7 @@
 
   &:hover {
     color: $c-purple;
+    opacity: 1;
   }
 
   &:focus {
